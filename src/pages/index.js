@@ -222,9 +222,14 @@ export default function Home({ data }) {
   return (
     <React.Fragment>
       <CssBaseline />
-      <AppBar position="relative" style={{ background: "#06101B" }}>
+      <AppBar position="relative" style={{ background: "#034870" }}>
         <Toolbar>
-          <Typography variant="h6" color="inherit" noWrap>
+          <Typography
+            variant="h6"
+            color="inherit"
+            style={{ fontWeight: "bold" }}
+            noWrap
+          >
             Mergify
           </Typography>
         </Toolbar>
@@ -237,6 +242,7 @@ export default function Home({ data }) {
               variant="h2"
               align="center"
               color="textPrimary"
+              style={{ fontWeight: "bold" }}
               gutterBottom
             >
               Mergify Masters 🥷🏻
@@ -309,7 +315,10 @@ export default function Home({ data }) {
                     <Typography className={classes.organization}>
                       {`${edge.node.organization}`}
                     </Typography>
-                    <Typography className={classes.extraMargin}>
+                    <Typography
+                      style={{ marginTop: "1.5rem" }}
+                      className={classes.extraMargin}
+                    >
                       {`Reach me at 👇`}
                     </Typography>
                     <Typography className={classes.extraMargin}>
@@ -320,7 +329,7 @@ export default function Home({ data }) {
                           component="a"
                           target="_blank"
                         >
-                          <GitHubIcon></GitHubIcon>
+                          <GitHubIcon style={{ color: "#53A9DB" }}></GitHubIcon>
                         </Link>
                       ) : null}
                       {edge.node.twitter ? (
@@ -330,7 +339,9 @@ export default function Home({ data }) {
                           component="a"
                           target="_blank"
                         >
-                          <TwitterIcon></TwitterIcon>
+                          <TwitterIcon
+                            style={{ color: "#53A9DB" }}
+                          ></TwitterIcon>
                         </Link>
                       ) : null}
                       {edge.node.linkedin ? (
@@ -340,21 +351,27 @@ export default function Home({ data }) {
                           component="a"
                           target="_blank"
                         >
-                          <LinkedInIcon></LinkedInIcon>
+                          <LinkedInIcon
+                            style={{ color: "#53A9DB" }}
+                          ></LinkedInIcon>
                         </Link>
                       ) : null}
                     </Typography>
                   </CardContent>
                   <Divider />
-                  <Typography
-                    gutterBottom
-                    variant="subtitle2"
-                    align="center"
-                    // variant="h6"
-                    // component="h6"
-                  >
-                    {` ${edge.node.testimonial}`}
-                  </Typography>
+                  <div style={{ padding: "1rem" }}>
+                    <Typography
+                      gutterBottom
+                      variant="subtitle2"
+                      align="center"
+                      style={{
+                        color: "#034870",
+                        fontStyle: "italic",
+                      }}
+                    >
+                      {` ${edge.node.testimonial}`}
+                    </Typography>
+                  </div>
                 </Card>
               </Grid>
             ))}
@@ -363,7 +380,12 @@ export default function Home({ data }) {
       </main>
       {/* Footer */}
       <footer className={classes.footer}>
-        <Typography variant="h6" align="center" gutterBottom>
+        <Typography
+          variant="h6"
+          align="center"
+          style={{ fontWeight: "bold" }}
+          gutterBottom
+        >
           We save your time by automatizing your pull requests and securing the
           code merge using a merge queue 💪
         </Typography>

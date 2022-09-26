@@ -1,10 +1,10 @@
 {
   "salutation": "Hola 🙂",
   "name": "Aabhas Sao",
-  "testimonial": "abc",
+  "testimonial": "Mergify has helped me automate 80% of the applications I have developed so far and ultimately made development process more hassel free for me",
   "organization": "Avalon Meta",
   "image": "/images/avatar/aabhas-sao.jpeg",
-  "backgroundImg": "/images/cover/aabhas-sao-cover.jpeg",
+  "backgroundImg": "/images/cover/mergify-cover.jpeg",
   "twitter": "https://twitter.com/aabhas_sao",
   "github": "https://github.com/aabhas-sao",
   "linkedin": "https://www.linkedin.com/in/aabhas-sao/"
