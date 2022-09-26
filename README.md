@@ -81,11 +81,11 @@ Please refer to the project's style and contribution guidelines for submitting p
  1. **Fork** the repo on GitHub
  2. **Clone** the project to your own machine
  3. **Commit** changes to your own branch
- 4. Name the **Branch" as per your GitHub username 
+ 4. Name the **Branch** as per your GitHub username 
  4. **Push** your work back up to your fork
  5. Submit a **Pull request** so that we can review your changes
  
-In the process please abide by  [Contributing Guidelines]() and [Code of Conduct]() 🚀
+In the process please abide by Contributing Guidelines and [Code of Conduct](https://github.com/Aniket762/mergify-masters/blob/main/CODE_OF_CONDUCT.md) 🚀
 
 ## Outro 💚
 The features of Mergify are endless. The purpose of this workshop was to spark an interest in this amazing tool which can save you a lot of time and efforts. Check out all the features in the [documentation](https://docs.mergify.com/). Don't wait too long, create your account and get started with [Mergify](https://mergify.com/?utm_source=blogger&utm_medium=social&utm_campaign=Aniket). In case you have some questions regarding the workshop or want to discuss something under the sun feel free to connect with me on [LinkedIn](https://www.linkedin.com/in/aniket-pal/) 💕
