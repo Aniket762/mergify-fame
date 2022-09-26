@@ -1,0 +1,11 @@
+{
+  "salutation": "Heyoo 👋",
+  "name": "Sumana Basu",
+  "skills": ["C++", "AR", "JavaScript"],
+  "organization": "SAP Labs",
+  "image": "/images/avatar/sumana2001.jpeg",
+  "backgroundImg": "/images/cover/sumana2001-cover.jpg",
+  "twitter": "https://twitter.com/sumanabasu09",
+  "github": "https://github.com/sumana2001",
+  "linkedin": "https://www.linkedin.com/in/sumana-basu-492842171/"
+}
