@@ -72,7 +72,9 @@ Make sure you name profile picture with your GitHub username. We only aim to mak
 
 ### 3️⃣ Add your cover picture in `static/images/cover`
 Make sure you name cover picture with your GitHub username. We only aim to make every file name unique thus avoiding any issues while rendering. As cover you can add any cool wallpaper which you have came across recently. We would love to see your cover as Mergify's cover, which is already stored in the directory and named as _mergify-cover.jpeg_ 
-<br/>
+<img src="https://user-images.githubusercontent.com/67703407/192363464-08940f87-f871-43ac-90fc-6e2196830587.png">
+
+
 Once, you have done all the changes specified above you are good to raise the Pull Request and checkout the automation by our bot!🚀
 
 ## How to send the Pull Request 🤯
