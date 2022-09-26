@@ -8,12 +8,10 @@ import {
   AppBar,
   Button,
   Card,
-  CardActions,
   CardMedia,
   Grid,
   Typography,
   Container,
-  Chip,
   Divider,
   Avatar,
   Box,
@@ -30,6 +28,7 @@ import TwitterIcon from "@material-ui/icons/Twitter"
 import FacebookIcon from "@material-ui/icons/Facebook"
 import LinkedInIcon from "@material-ui/icons/LinkedIn"
 import WebIcon from "@material-ui/icons/Language"
+import { Helmet } from "react-helmet"
 
 const useStyles = makeStyles(theme => ({
   icon: {
@@ -137,6 +136,9 @@ function Footer() {
   }
   return (
     <div className={classes.root}>
+      <Helmet>
+        <title>Mergify Masters</title>
+      </Helmet>
       <Container maxWidth="lg">
         <Grid
           container
@@ -308,7 +310,7 @@ export default function Home({ data }) {
                       {`${edge.node.organization}`}
                     </Typography>
                     <Typography className={classes.extraMargin}>
-                      {`You can reach me at :`}
+                      {`Reach me at 👇`}
                     </Typography>
                     <Typography className={classes.extraMargin}>
                       {edge.node.github ? (
@@ -344,18 +346,15 @@ export default function Home({ data }) {
                     </Typography>
                   </CardContent>
                   <Divider />
-                  <CardActions className={classes.chipActions}>
-                    {edge.node.skills.slice(0, 4).map((skill, i) => (
-                      <Chip
-                        key={i}
-                        className={classes.chip}
-                        label={skill}
-                        variant="outlined"
-                        color="primary"
-                        avatar={<Avatar>{skill[0].toUpperCase()}</Avatar>}
-                      />
-                    ))}
-                  </CardActions>
+                  <Typography
+                    gutterBottom
+                    variant="subtitle2"
+                    align="center"
+                    // variant="h6"
+                    // component="h6"
+                  >
+                    {` ${edge.node.testimonial}`}
+                  </Typography>
                 </Card>
               </Grid>
             ))}
@@ -388,7 +387,7 @@ export const query = graphql`
           salutation
           name
           organization
-          skills
+          testimonial
           backgroundImg
           image
           github
