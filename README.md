@@ -18,7 +18,7 @@ Mergify is FREE for opensource repositories, once you learn the workflow from th
 
 
 ## How to run in local host 👨‍💻
-
+First of all, thanks a lot for taking out the time to review our product in action. Hope you have a great experience ahead 💪
 ### Install Node JS
 Refer to https://nodejs.org/en/ to install nodejs
 
@@ -74,3 +74,18 @@ Make sure you name profile picture with your GitHub username. We only aim to mak
 Make sure you name cover picture with your GitHub username. We only aim to make every file name unique thus avoiding any issues while rendering. As cover you can add any cool wallpaper which you have came across recently. We would love to see your cover as Mergify's cover, which is already stored in the directory and named as _mergify-cover.jpeg_ 
 <br/>
 Once, you have done all the changes specified above you are good to raise the Pull Request and checkout the automation by our bot!🚀
+
+## How to send the Pull Request 🤯
+Please refer to the project's style and contribution guidelines for submitting patches and additions. In general, we follow the "fork-and-pull" Git workflow.
+
+ 1. **Fork** the repo on GitHub
+ 2. **Clone** the project to your own machine
+ 3. **Commit** changes to your own branch
+ 4. Name the **Branch" as per your GitHub username 
+ 4. **Push** your work back up to your fork
+ 5. Submit a **Pull request** so that we can review your changes
+ 
+In the process please abide by  [Contributing Guidelines]() and [Code of Conduct]() 🚀
+
+## Outro 💚
+The features of Mergify are endless. The purpose of this workshop was to spark an interest in this amazing tool which can save you a lot of time and efforts. Check out all the features in the [documentation](https://docs.mergify.com/). Don't wait too long, create your account and get started with [Mergify](https://mergify.com/?utm_source=blogger&utm_medium=social&utm_campaign=Aniket). In case you have some questions regarding the workshop or want to discuss something under the sun feel free to connect with me on [LinkedIn](https://www.linkedin.com/in/aniket-pal/) 💕
