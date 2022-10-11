@@ -15,15 +15,10 @@ import {
   Divider,
   Avatar,
   Box,
-  Hidden,
 } from "@material-ui/core"
 import Link from "@material-ui/core/Link"
 import { graphql } from "gatsby"
 import GitHubIcon from "@material-ui/icons/GitHub"
-import List from "@material-ui/core/List"
-import ListItem from "@material-ui/core/ListItem"
-import ListItemIcon from "@material-ui/core/ListItemIcon"
-import ListItemText from "@material-ui/core/ListItemText"
 import TwitterIcon from "@material-ui/icons/Twitter"
 import FacebookIcon from "@material-ui/icons/Facebook"
 import LinkedInIcon from "@material-ui/icons/LinkedIn"
@@ -98,12 +93,9 @@ const useStyles = makeStyles(theme => ({
     },
     color: "#FFF",
   },
-  iconSocialMedia: {
-    marginLeft: "-20px",
-    color: "#fff",
-  },
   iconSize: {
     fontSize: "32px",
+    color: "#fff",
   },
   organization: {
     backgroundColor: "#067ABD",
@@ -129,85 +121,38 @@ const ColorButton = withStyles(theme => ({
 }))(Button)
 function Footer() {
   const classes = useStyles()
-  const flexContainer = {
-    display: "flex",
-    flexDirection: "row",
-    padding: 0,
-  }
   return (
     <div className={classes.root}>
       <Helmet>
         <title>Mergify Masters</title>
       </Helmet>
       <Container maxWidth="lg">
-        <Grid
-          container
-          component="dl"
-          alignItems="center"
-          justify="center"
-          item
-          xs={12}
-          md={12}
-        >
-          <List style={flexContainer}>
-            <ListItem component="a" href="https://mergify.com/">
-              <ListItemIcon className={classes.iconSocialMedia}>
-                <WebIcon className={classes.iconSize} />
-              </ListItemIcon>
-              <Hidden xsDown>
-                <ListItemText className={classes.iconSocialMedia} />
-              </Hidden>
-            </ListItem>
-            <ListItem
-              component="a"
-              href="https://github.com/mergifyio"
-              target="_blank"
-            >
-              <ListItemIcon className={classes.iconSocialMedia}>
-                <GitHubIcon className={classes.iconSize} />
-              </ListItemIcon>
-              <Hidden xsDown>
-                <ListItemText className={classes.iconSocialMedia} />
-              </Hidden>
-            </ListItem>
-            <ListItem
-              component="a"
-              href="https://www.facebook.com/mergifyio/"
-              target="_blank"
-            >
-              <ListItemIcon className={classes.iconSocialMedia}>
-                <FacebookIcon className={classes.iconSize} />
-              </ListItemIcon>
-              <Hidden xsDown>
-                <ListItemText className={classes.iconSocialMedia} />
-              </Hidden>
-            </ListItem>
-            <ListItem
-              component="a"
-              href="https://twitter.com/Mergifyio"
-              target="_blank"
-            >
-              <ListItemIcon className={classes.iconSocialMedia}>
-                <TwitterIcon className={classes.iconSize} />
-              </ListItemIcon>
-              <Hidden xsDown>
-                <ListItemText className={classes.iconSocialMedia} />
-              </Hidden>
-            </ListItem>
-            <ListItem
-              component="a"
-              href="https://www.linkedin.com/company/mergify/"
-              target="_blank"
-            >
-              <ListItemIcon className={classes.iconSocialMedia}>
-                <LinkedInIcon className={classes.iconSize} />
-              </ListItemIcon>
-              <Hidden xsDown>
-                <ListItemText className={classes.iconSocialMedia} />
-              </Hidden>
-            </ListItem>
-          </List>
-          {/* </Grid> */}
+        <Grid container spacing={1} alignItems="center" justify="center" >
+          <Grid item xs={2} md={1} justify="center">
+            <Link href="https://mergify.com/">
+              <WebIcon className={classes.iconSize} />
+            </Link>
+          </Grid>
+          <Grid item xs={2}  md={1} justify="center">
+            <Link href="https://github.com/mergifyio">
+              <GitHubIcon className={classes.iconSize} />
+            </Link>
+          </Grid>
+          <Grid item xs={2} md={1} justify="center">
+            <Link href="https://www.facebook.com/mergifyio/">
+              <FacebookIcon className={classes.iconSize} />
+            </Link>
+          </Grid>
+          <Grid item xs={2} md={1} justify="center">
+            <Link href="https://twitter.com/Mergifyio">
+              <TwitterIcon className={classes.iconSize} />
+            </Link>
+          </Grid>
+          <Grid item xs={2} md={1} justify="center">
+            <Link href="https://www.linkedin.com/company/mergify/">
+              <LinkedInIcon className={classes.iconSize} />
+            </Link>
+          </Grid>
         </Grid>
       </Container>
     </div>
