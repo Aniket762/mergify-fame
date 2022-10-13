@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useState } from "react"
 import CardContent from "@material-ui/core/CardContent"
 import CssBaseline from "@material-ui/core/CssBaseline"
 import Toolbar from "@material-ui/core/Toolbar"
@@ -127,13 +127,13 @@ function Footer() {
         <title>Mergify Masters</title>
       </Helmet>
       <Container maxWidth="lg">
-        <Grid container spacing={1} alignItems="center" justify="center" >
+        <Grid container spacing={1} alignItems="center" justify="center">
           <Grid item xs={2} md={1} justify="center">
             <Link href="https://mergify.com/">
               <WebIcon className={classes.iconSize} />
             </Link>
           </Grid>
-          <Grid item xs={2}  md={1} justify="center">
+          <Grid item xs={2} md={1} justify="center">
             <Link href="https://github.com/mergifyio">
               <GitHubIcon className={classes.iconSize} />
             </Link>
@@ -161,8 +161,15 @@ function Footer() {
 
 export default function Home({ data }) {
   const classes = useStyles()
-
   const edges = data.allContributorsJson.edges
+  const readMoreArray = new Array(edges.length).fill(true)
+  const [isReadMore, setIsReadMore] = useState(readMoreArray)
+  const toggleReadMore = index => {
+    let newArr = [...isReadMore]
+    newArr[index] = !newArr[index]
+    setIsReadMore(newArr)
+    console.log(isReadMore)
+  }
 
   return (
     <React.Fragment>
@@ -314,7 +321,18 @@ export default function Home({ data }) {
                         fontStyle: "italic",
                       }}
                     >
-                      {` ${edge.node.testimonial}`}
+                      {isReadMore[index]
+                        ? edge.node.testimonial.slice(0, 75)
+                        : edge.node.testimonial}
+                      {edge.node.testimonial.length > 75 && (
+                        <Button
+                          onClick={() =>
+                            toggleReadMore(index)
+                          }
+                        >
+                          {isReadMore[index] ? "read more" : " show less"}
+                        </Button>
+                      )}
                     </Typography>
                   </div>
                 </Card>
